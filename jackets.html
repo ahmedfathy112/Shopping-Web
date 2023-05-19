@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="shoppers-delight-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Jackets Section</title>
+  </head>
+  <body>
+    <div class="container relative flex justify-center">
+      <header
+        id="head"
+        class="w-64 absolute top-0 left-0 bg-white shadow-lg min-h-screen"
+      >
+        <nav class="flex justify-center flex-col w-full h-full rounded-e-2xl">
+          <div
+            class="logo cursor-pointer flex justify-around w-full mr-5 my-5 py-2 px-3 rounded-3xl hover:bg-gray-400 duration-500"
+          >
+            <img
+              src="my photo.jpg"
+              alt=""
+              class="rounded-full w-12 h-12 mr-3"
+            />
+            <div class="my-name w-full">
+              <h3 class="text-lg font-bold text-left text-black">
+                Ahmed Fathy
+              </h3>
+              <p class="text-sm text-black font-bold">Admin</p>
+            </div>
+            <i
+              onclick="showNav()"
+              class="humbrger-icon fa-solid fa-bars fa-bounce mt-3 text-2xl"
+            ></i>
+          </div>
+          <ul class="General w-full text-left ml-4 list-none">
+            <h3 class="capitalize font-bold text-lg text-gray-950 my-5">
+              General
+            </h3>
+            <a
+              href="index.html"
+              class="block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-house mr-3"></i> Home</a
+            >
+            <a href="#" class="block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-address-card mr-3"></i>About Us</a
+            >
+            <a href="#" class="block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-phone mr-3"></i>Contact Us</a
+            >
+          </ul>
+          <ul class="mangment w-full text-left ml-4 list-none">
+            <h3 class="capitalize font-bold text-lg text-gray-950 my-5">
+              Management
+            </h3>
+            <a
+              onclick="show1()"
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3 hover:bg-gray-400 hover:text-green-700 w-48 pl-3 py-2 pr-2 rounded-xl duration-500"
+              ><i class="fa-solid fa-user mr-3"></i> Users
+              <i class="fa-solid fa-arrow-right fa-beat-fade ml-20"></i>
+            </a>
+            <ul
+              class="mangment-links w-48 p-3 text-left ml-4 shadow-md"
+              id="links-1"
+            >
+              <a
+                href="#"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >About Us</a
+              >
+              <a
+                href="#"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >Contact Us</a
+              >
+            </ul>
+            <a
+              onclick="show2()"
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3 hover:bg-gray-400 hover:text-green-700 w-48 pl-3 py-2 pr-2 rounded-xl duration-500"
+              ><i class="fa-solid fa-cart-shopping mr-2"></i> E-commerce
+              <i class="fa-solid fa-arrow-right fa-beat-fade ml-9"></i>
+            </a>
+            <ul
+              class="mangment-links w-48 p-3 text-left ml-4 shadow-md"
+              id="links-2"
+            >
+              <a
+                href="shoes.html"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >Shoes</a
+              >
+              <a
+                href="#"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >Jackets</a
+              >
+              <a
+                href="watches.html"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >Watches</a
+              >
+            </ul>
+          </ul>
+          <ul class="Apps w-full text-left ml-4 list-none">
+            <h3 class="capitalize font-bold text-lg text-gray-950 my-5">
+              Apps
+            </h3>
+            <a
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-envelope mr-3"></i> Mail</a
+            >
+            <a
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-brands fa-rocketchat mr-3"></i> Chat</a
+            >
+            <a
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-calendar-days mr-3"></i> Calender</a
+            >
+            <a
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-computer mr-3"></i> Kanban</a
+            >
+          </ul>
+        </nav>
+      </header>
+      <section class="jackets-sec">
+        <div class="search ml-6 mt-6">
+          <a href="#" onclick="showNav()" class="humburger-main">
+            <i
+              class="humbrger-icon fa-solid fa-bars fa-bounce mt-3 text-2xl cursor-pointer"
+            ></i
+          ></a>
+          <i class="fa-solid fa-magnifying-glass fa-beat"></i>
+          <input
+            type="search"
+            class="border-orange-400 border-4 rounded-2xl ml-4 shadow-xl py-1 px-3"
+          />
+        </div>
+        <h3 class="text-black text-2xl font-extrabold capitalize mt-14 ml-6">
+          Jackets <span class="text-orange-600">Section</span>
+        </h3>
+        <div class="auto-slider-container mt-16">
+          <div class="slider">
+            <div
+              class="jacket-card w-full rounded-3xl text-center p-3 m-3 shadow-xl flex justify-center items-center flex-col h-full relative"
+            >
+              <img
+                src="jackets image/jacket6.jpeg"
+                class="w-full h-full absolute rounded-3xl -z-10"
+                alt=""
+              />
+              <h3 class="text-3xl font-bold text-center text-orange-500">
+                Jacket
+              </h3>
+              <div class="card-price flex mt-5 justify-around">
+                <p class="text-orange-300">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+                <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+              </div>
+              <a
+                href="#"
+                class="py-3 px-5 w-52 text-xl font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+                >Buy Now</a
+              >
+            </div>
+            <div
+              class="jacket-card w-full rounded-3xl text-center p-3 m-3 shadow-xl flex justify-center items-center flex-col h-full relative"
+            >
+              <img
+                src="jackets image/jacket3.jpeg"
+                class="w-full h-full absolute rounded-3xl -z-10"
+                alt=""
+              />
+              <h3 class="text-xl font-bold text-center text-orange-500">
+                Jacket
+              </h3>
+              <div class="card-price flex mt-5 justify-around">
+                <p class="text-orange-300">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+                <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+              </div>
+              <a
+                href="#"
+                class="py-3 px-5 w-52 text-xl font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+                >Buy Now</a
+              >
+            </div>
+            <div
+              class="jacket-card w-full rounded-3xl text-center p-3 m-3 shadow-xl flex justify-center items-center flex-col h-full relative"
+            >
+              <img
+                src="jackets image/jacket3.jpeg"
+                class="w-full h-full absolute rounded-3xl -z-10"
+                alt=""
+              />
+              <h3 class="text-xl font-bold text-center text-orange-500">
+                Jacket
+              </h3>
+              <div class="card-price flex mt-5 justify-around">
+                <p class="text-orange-300">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+                <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+              </div>
+              <a
+                href="#"
+                class="py-3 px-5 w-52 text-xl font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-center text-3xl text-black font-bold mb-6 mt-5">
+          Top <span class="text-orange-500">Rated</span>
+        </h2>
+        <div class="slider-container shadow-lg">
+          <div class="slider">
+            <div
+              class="jacket-card w-full rounded-3xl text-center p-3 m-3 shadow-xl"
+            >
+              <img
+                src="jackets image/jacket3.jpeg"
+                class="w-64 h-52 rounded-3xl"
+                alt=""
+              />
+              <h3 class="text-xl font-bold text-center text-orange-500">
+                Jacket
+              </h3>
+              <div class="card-price flex mt-5 justify-around">
+                <p class="text-orange-300">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+                <p class="text-green-600 font-bold text-lg">255$</p>
+              </div>
+              <a
+                href="#"
+                class="py-3 px-5 w-full text-xl font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+                >Buy Now</a
+              >
+            </div>
+            <div
+              class="jacket-card w-full rounded-3xl text-center p-3 m-3 shadow-xl"
+            >
+              <img
+                src="jackets image/jacket6.jpeg"
+                class="w-64 h-52 rounded-3xl"
+                alt=""
+              />
+              <h3 class="text-xl font-bold text-center text-orange-500">
+                Jacket
+              </h3>
+              <div class="card-price flex mt-5 justify-around">
+                <p class="text-orange-300">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+                <p class="text-green-600 font-bold text-lg">100$</p>
+              </div>
+              <a
+                href="#"
+                class="py-3 px-5 w-full text-xl font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+                >Buy Now</a
+              >
+            </div>
+            <div
+              class="jacket-card w-full h-auto rounded-3xl text-center p-3 m-3 shadow-xl"
+            >
+              <img
+                src="jackets image/jacket7.jpeg"
+                class="w-96 h-52 rounded-3xl"
+                alt=""
+              />
+              <h3 class="text-xl font-bold text-center text-orange-500">
+                Jacket
+              </h3>
+              <div class="card-price flex mt-5 justify-around">
+                <p class="text-orange-300">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+                <p class="text-green-600 font-bold text-lg">155$</p>
+              </div>
+              <a
+                href="#"
+                class="py-3 px-5 w-full text-xl font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+                >Buy Now</a
+              >
+            </div>
+            <div
+              class="jacket-card w-full rounded-3xl text-center p-3 m-3 shadow-xl"
+            >
+              <img
+                src="jackets image/jacket8.jpeg"
+                class="w-64 h-52 rounded-3xl"
+                alt=""
+              />
+              <h3 class="text-xl font-bold text-center text-orange-500">
+                Jacket
+              </h3>
+              <div class="card-price flex mt-5 justify-around">
+                <p class="text-orange-300">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+                <p class="text-green-600 font-bold text-lg">200$</p>
+              </div>
+              <a
+                href="#"
+                class="py-3 px-5 w-full text-xl font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="" id="prev">&lt;</button>
+            <button class="" id="next">&gt;</button>
+          </div>
+        </div>
+        <h3 class="text-center text-3xl font-bold text-orange-600 mt-9">
+          Products
+        </h3>
+        <div
+          class="jackets-cards w-full min-h-screen flex flex-wrap justify-center flex-row my-11"
+        >
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket1.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 1
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket2.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 2
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket3.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 3
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket4.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 4
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket5.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 5
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket6.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 6
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket7.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 7
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket8.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 8
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket9.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 9
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="jackets-card w-80 tesxt-center rounded-3xl m-5 p-3 shadow-xl"
+          >
+            <img
+              src="jackets image/jacket10.jpeg"
+              class="w-full rounded-3xl mb-3 h-64"
+              alt=""
+            />
+            <h3 class="text-center text-2xl text-orange-500 font-bold">
+              Jacket 10
+            </h3>
+            <div class="card-price flex mt-5 justify-around">
+              <p class="text-orange-300">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <p class="text-green-600 ml-3 font-bold text-lg">255$</p>
+            </div>
+            <a
+              href="#"
+              class="py-3 px-5 w-full text-xl text-center font-bold inline-block border-2 border-orange-600 rounded-2xl duration-500 hover:bg-transparent hover:text-orange-600 mb-3 bg-orange-500 text-white mt-5"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

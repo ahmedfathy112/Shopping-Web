@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.mangment .mangment-links {
+  display: none;
+}
+.show {
+  display: block;
+}
+.main-sec {
+  width: 75%;
+  margin-left: 258px;
+  overflow-x: hidden;
+}
+
+.shoes-sec {
+  width: 75%;
+  margin-left: 258px;
+  overflow-x: hidden;
+}
+.jackets-sec {
+  width: 75%;
+  margin-left: 258px;
+  overflow-x: hidden;
+}
+.jackets-sec::-webkit-scrollbar {
+  display: none;
+}
+.card-content {
+  display: none;
+  transition: 5s;
+}
+.main-cards .card:hover .card-content {
+  display: block;
+}
+nav .humbrger-icon {
+  display: none;
+  cursor: pointer;
+}
+.main-sec .humburger-main {
+  position: absolute;
+  top: 19px;
+  left: 16px;
+  z-index: -1;
+}
+.shoes-sec .humburger-main {
+  position: absolute;
+  top: 19px;
+  left: 16px;
+  z-index: -1;
+}
+.jackets-sec .humburger-main {
+  position: absolute;
+  top: 19px;
+  left: 16px;
+  z-index: -1;
+}
+.show-nav {
+  display: block;
+}
+.jackets-cards .jackets-card {
+  height: 450px;
+}
+/* start slider */
+
+.slider-container {
+  width: 1000px;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-controls button {
+  background-color: rgba(118, 4, 4, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.slider-controls button:hover {
+  background-color: rgba(132, 5, 5, 0.8);
+}
+
+@media (max-width: 768px) {
+}
+.auto-slider-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.auto-slider-container .slider {
+  display: flex;
+  width: 300%; /* This value is equal to the number of slides multiplied by 100% */
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+.jackets-card {
+  position: relative;
+}
+.auto-slider-container .slider img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+/* Optional: Add navigation buttons */
+.slider-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.slider-nav button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+/* end slider */
+@media screen and (max-width: 767px) {
+  .main-sec .humburger-main {
+    z-index: 1;
+  }
+  .main-sec .search {
+    margin-left: 4.5rem;
+  }
+  nav .humbrger-icon {
+    display: block;
+  }
+  .main-sec {
+    width: 100%;
+    margin-left: 0;
+  }
+  .main-contents {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .main-contents .content {
+    padding: 20px;
+  }
+  .main-contents img {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin-left: 80px;
+  }
+  .shoes-sec .humburger-main {
+    z-index: 1;
+  }
+  .shoes-sec .search {
+    margin-left: 4.5rem;
+  }
+  .shoes-sec {
+    width: 100%;
+    margin-left: 0;
+  }
+  .jackets-sec .humburger-main {
+    z-index: 1;
+  }
+  .jackets-sec .search {
+    margin-left: 4.5rem;
+  }
+  .jackets-sec {
+    width: 100%;
+    margin-left: 0;
+  }
+  .slider-controls {
+    left: 25%;
+  }
+  header {
+    position: fixed;
+    background-color: white;
+    display: none;
+  }
+  nav {
+    position: sticky;
+    background-color: aliceblue;
+    z-index: 999;
+  }
+  .main-cards {
+    text-align: center;
+    justify-content: center;
+  }
+  .main-cards .card {
+    margin: 15px;
+    width: 150px;
+    height: 200px;
+  }
+}

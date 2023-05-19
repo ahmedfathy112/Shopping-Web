@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="shoppers-delight-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping Website</title>
+  </head>
+  <body>
+    <div class="container relative flex justify-center">
+      <header
+        id="head"
+        class="w-64 absolute top-0 left-0 bg-white shadow-lg min-h-screen"
+      >
+        <nav class="flex justify-center flex-col w-full h-full rounded-e-2xl">
+          <div
+            class="logo cursor-pointer flex justify-around w-full mr-5 my-5 py-2 px-3 rounded-3xl hover:bg-gray-400 duration-500"
+          >
+            <img
+              src="my photo.jpg"
+              alt=""
+              class="rounded-full w-12 h-12 mr-3"
+            />
+            <div class="my-name w-full">
+              <h3 class="text-lg font-bold text-left text-black">
+                Ahmed Fathy
+              </h3>
+              <p class="text-sm text-black font-bold">Admin</p>
+            </div>
+            <i
+              onclick="showNav()"
+              class="humbrger-icon fa-solid fa-bars fa-bounce mt-3 text-2xl"
+            ></i>
+          </div>
+          <ul class="General w-full text-left ml-4 list-none">
+            <h3 class="capitalize font-bold text-lg text-gray-950 my-5">
+              General
+            </h3>
+            <a
+              href="index.html"
+              class="block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-house mr-3"></i> Home</a
+            >
+            <a href="#" class="block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-address-card mr-3"></i>About Us</a
+            >
+            <a href="#" class="block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-phone mr-3"></i>Contact Us</a
+            >
+          </ul>
+          <ul class="mangment w-full text-left ml-4 list-none">
+            <h3 class="capitalize font-bold text-lg text-gray-950 my-5">
+              Management
+            </h3>
+            <a
+              onclick="show1()"
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3 hover:bg-gray-400 hover:text-green-700 w-48 pl-3 py-2 pr-2 rounded-xl duration-500"
+              ><i class="fa-solid fa-user mr-3"></i> Users
+              <i class="fa-solid fa-arrow-right fa-beat-fade ml-20"></i>
+            </a>
+            <ul
+              class="mangment-links w-48 p-3 text-left ml-4 shadow-md"
+              id="links-1"
+            >
+              <a
+                href="#"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >About Us</a
+              >
+              <a
+                href="#"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >Contact Us</a
+              >
+            </ul>
+            <a
+              onclick="show2()"
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3 hover:bg-gray-400 hover:text-green-700 w-48 pl-3 py-2 pr-2 rounded-xl duration-500"
+              ><i class="fa-solid fa-cart-shopping mr-2"></i> E-commerce
+              <i class="fa-solid fa-arrow-right fa-beat-fade ml-9"></i>
+            </a>
+            <ul
+              class="mangment-links w-48 p-3 text-left ml-4 shadow-md"
+              id="links-2"
+            >
+              <a
+                href="shoes.html"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >Shoes</a
+              >
+              <a
+                href="jackets.html"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >Jackets</a
+              >
+              <a
+                href="watches.html"
+                class="block hover:text-green-700 hover:bg-gray-400 rounded-2xl duration-500 p-3 pl-4 text-sm text-gray-600 font-bold ml-4 mb-3 capitalize"
+                >Watches</a
+              >
+            </ul>
+          </ul>
+          <ul class="Apps w-full text-left ml-4 list-none">
+            <h3 class="capitalize font-bold text-lg text-gray-950 my-5">
+              Apps
+            </h3>
+            <a
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-envelope mr-3"></i> Mail</a
+            >
+            <a
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-brands fa-rocketchat mr-3"></i> Chat</a
+            >
+            <a
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-calendar-days mr-3"></i> Calender</a
+            >
+            <a
+              href="#"
+              class="link-disabeld block text-sm text-gray-600 font-bold ml-4 mb-3"
+              ><i class="fa-solid fa-computer mr-3"></i> Kanban</a
+            >
+          </ul>
+        </nav>
+      </header>
+      <section class="main-sec">
+        <div class="search ml-6 mt-6">
+          <a href="#" onclick="showNav()" class="humburger-main">
+            <i
+              class="humbrger-icon fa-solid fa-bars fa-bounce mt-3 text-2xl cursor-pointer"
+            ></i
+          ></a>
+          <i class="fa-solid fa-magnifying-glass fa-beat"></i>
+          <input
+            type="search"
+            class="border-orange-400 border-4 rounded-2xl ml-4 shadow-xl py-1 px-3"
+          />
+        </div>
+        <h3 class="text-black text-2xl font-bold capitalize mt-14 ml-6">
+          Home
+        </h3>
+        <div class="main-contents flex justify-around w-full mt-9 flex-row">
+          <div class="content mt-32">
+            <h3 class="mb-5 text-3xl font-bold">
+              Shopper's <span class="text-orange-500">Delight</span>
+            </h3>
+            <p class="text-lg font-bold mb-3">
+              Welcome to Shopper's Delight - Your Ultimate Online Shopping
+              Destination!
+            </p>
+            <a
+              href="#departments"
+              class="text-lg py-3 px-4 font-bold rounded-3xl bg-orange-500 mt-4 text-white inline-block"
+              >View Our Deparments</a
+            >
+          </div>
+          <img
+            src="shoppers-delight-logo.png"
+            class="rounded-full w-80"
+            alt=""
+          />
+        </div>
+        <div class="main-service mt-10 text-center">
+          <h3 class="text-center font-bold text-3xl">
+            Our <span class="text-orange-500">Service</span>
+          </h3>
+          <div
+            class="service-cards mt-7 flex justify-center flex-row flex-wrap w-full"
+          >
+            <div
+              class="service-card w-80 m-5 text-center rounded-2xl p-5 shadow-xl"
+            >
+              <img
+                src="image shoes/shoes4.jpeg"
+                class="w-72 rounded-2xl h-52"
+                alt=""
+              />
+              <h3 class="font-bold text-center text-2xl text-orange-500 mb-4">
+                Best Choose
+              </h3>
+              <p class="text-lg font-bold text-center">
+                "We have the best option you can choose as we have many products
+                available to you."
+              </p>
+            </div>
+            <div
+              class="service-card w-80 m-5 text-center rounded-2xl p-5 shadow-xl"
+            >
+              <img
+                src="watchs image/Rolex2.jpg"
+                class="w-72 rounded-2xl h-52"
+                alt=""
+              />
+              <h3 class="font-bold text-center text-2xl text-orange-500 mb-4">
+                Best Quality
+              </h3>
+              <p class="text-lg font-bold text-center">
+                "We have the best quality you can find as we care about the
+                manufacturing quality more than you can imagine."
+              </p>
+            </div>
+            <div
+              class="service-card w-80 m-5 text-center rounded-2xl p-5 shadow-xl"
+            >
+              <img
+                src="jackets image/jacket6.jpeg"
+                class="w-72 rounded-2xl h-52"
+                alt=""
+              />
+              <h3
+                class="font-bold text-center text-2xl text-orange-500 mb-4"
+                id="service"
+              >
+                Best Price
+              </h3>
+              <p class="text-lg font-bold text-center">
+                "We have the best prices that are unbeatable. Just place an
+                order and you will find the best prices waiting for you."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="main-department w-full mt-8 text-center" id="departments">
+          <h3 class="text-center font-bold text-3xl">
+            Our <span class="text-orange-500">Departments</span>
+          </h3>
+          <div
+            class="departments-cards w-full justify-center mt-7 flex flex-wrap flex-row"
+          >
+            <div
+              class="departments-card shadow-2xl w-80 rounded-2xl m-5 text-center p-5"
+            >
+              <img
+                src="image shoes/shoes1.jpg"
+                class="w-72 rounded-2xl text-center"
+                alt=""
+              />
+              <h3
+                class="font-bold mt-3 text-center text-2xl text-orange-500 mb-4"
+              >
+                Shoes
+              </h3>
+              <p class="my-4 text-center font-bold text-lg">
+                "Here you can browse through a large collection of amazing
+                shoes."
+              </p>
+            </div>
+            <div
+              class="departments-card shadow-2xl w-80 rounded-2xl m-5 text-center p-5"
+            >
+              <img
+                src="jackets image/jacket5.jpeg"
+                class="w-72 rounded-2xl text-center"
+                alt=""
+              />
+              <h3
+                class="font-bold mt-3 text-center text-2xl text-orange-500 mb-4"
+              >
+                Jackets
+              </h3>
+              <p class="my-4 text-center font-bold text-lg">
+                "Here you can browse through a large collection of amazing
+                Jackets."
+              </p>
+            </div>
+            <div
+              class="departments-card shadow-2xl w-80 rounded-2xl m-5 text-center p-5"
+            >
+              <img
+                src="watchs image/HUBLOT2.jpg"
+                class="w-72 rounded-2xl text-center h-64"
+                alt=""
+              />
+              <h3
+                class="font-bold mt-3 text-center text-2xl text-orange-500 mb-4"
+              >
+                Watches
+              </h3>
+              <p class="my-4 text-center font-bold text-lg">
+                "Here you can browse through a large collection of amazing
+                Watches."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
